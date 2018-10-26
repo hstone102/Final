@@ -32,9 +32,9 @@
 
     <div class="field">
         <p class="control">
-          <center><button class="button is-rounded is-medium is-info">
+          <button class="button center is-rounded is-medium is-info">
             Login
-          </button></center>
+          </button>
         </p>
     </div>
 
