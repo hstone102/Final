@@ -12493,3 +12493,8 @@ label.panel-block:hover {
   font-size: 30px;
 }
 
+.textmedium {
+  font-size: 20px;
+  font-weight: bold;
+}
+
