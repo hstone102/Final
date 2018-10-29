@@ -6,6 +6,7 @@
 
 <div class="columns">
   <div class="column">
+    <a href="supervisorReviewEvent">
     <div class="box m-b-lg">
       <article class="media">
         <div class="media-left">
@@ -20,9 +21,10 @@
             </div>
           </div>
       </article>
-    </div>
+    </div></a>
   </div>
   <div class="column">
+    <a href="supervisorReviewChart">
     <div class="box">
       <article class="media">
         <div class="media-left">
@@ -36,12 +38,13 @@
             </div>
           </div>
       </article>
-    </div>
+    </div></a>
   </div>
 </div>
 
 <div class="columns">
   <div class="column">
+    <a href="supervisorVisitReport">
     <div class="box m-b-lg">
       <article class="media">
         <div class="media-left">
@@ -55,9 +58,10 @@
             </div>
           </div>
       </article>
-    </div>
+    </div></a>
   </div>
   <div class="column">
+    <a href="supervisorProjectedCalendar">
     <div class="box">
       <article class="media">
         <div class="media-left">
@@ -71,12 +75,13 @@
             </div>
           </div>
       </article>
-    </div>
+    </div></a>
   </div>
 </div>
 
 <div class="columns">
   <div class="column">
+    <a href="supervisorNewClient">
     <div class="box m-b-lg">
       <article class="media">
         <div class="media-left">
@@ -90,9 +95,10 @@
             </div>
           </div>
       </article>
-    </div>
+    </div></a>
   </div>
   <div class="column">
+    <a href="supervisorInputData">
     <div class="box">
       <article class="media">
         <div class="media-left">

@@ -46,6 +46,13 @@ Route::get('/supervisor/supervisorEmployeeDashboard', function () {
 Route::get('/supervisor/supervisorDashboard', function () {
     return view('supervisor.supervisorDashboard');
 });
+Route::get('/supervisor/supervisorNewClient', function () {
+    return view('supervisor.supervisorNewClient');
+});
+
+Route::get('/supervisor/supervisorInputData', function () {
+    return view('supervisor.supervisorInputData');
+});
 
 
 
