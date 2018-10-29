@@ -941,7 +941,7 @@ Would you like to write a log or contact?
       Mandatory Reporting/Referral
     </label>
   </div>
-  <div class="column is-4">
+  <div class="column is-5">
     <label class="checkbox">
       <input type="checkbox">
       Parent-Home Visitor Partnership Agreement/Toy Safety
@@ -953,6 +953,8 @@ Would you like to write a log or contact?
       Contact Information
     </label>
   </div>
+</div>
+<div class="columns">
   <div class="column is-2">
     <label class="checkbox">
       <input type="checkbox">
@@ -965,33 +967,380 @@ Would you like to write a log or contact?
       Other
     </label>
   </div>
+  <div class="column">
+      <input class="input" type="text" placeholder="Text input">
+  </div>
 </div>
 
-
-
-  <div class="field is-horizontal ">
-    <div class="field-label is-normal m-b-xl">
-      <label class="label m-t-xl">Describe Contact</label>
-    </div>
-    <div class="field-body m-b-xl m-t-xl">
+<div class="textmedium m-b-md">
+  Parent/Child Interaction (describe behaviors and activities observed between the parent and child):
+</div>
+<div class="columns">
+  <div class="column centertext textmedium">
+    Cues
+  </div>
+  <div class="column centertext textmedium">
+    Expressions
+  </div>
+  <div class="column centertext textmedium">
+    Empathy
+  </div>
+</div>
+<div class="columns">
+  <div class="column">
+    <div class="field-body m-b-xl m-t-sm">
       <div class="field">
         <div class="control">
-          <textarea class="textarea" placeholder="Describe the contact here."></textarea>
+          <textarea class="textarea" placeholder="Describe the cue here."></textarea>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="control centertext m-b-xl">
-    <button class="button is-info">Submit Contact</button>
+  <div class="column">
+    <div class="field-body m-b-xl m-t-sm">
+      <div class="field">
+        <div class="control">
+          <textarea class="textarea" placeholder="Describe the expression here."></textarea>
+        </div>
+      </div>
+    </div>
   </div>
-
+  <div class="column">
+    <div class="field-body m-b-xl m-t-sm">
+      <div class="field">
+        <div class="control">
+          <textarea class="textarea" placeholder="Describe the empathy here."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
+<div class="textmedium m-b-md">
+  Parent/Child Interaction (describe behaviors and activities observed between the parent and child):
+</div>
 
+<div class="field-body m-b-xl m-t-sm">
+  <div class="field">
+    <div class="control">
+      <textarea class="textarea" placeholder="Describe the contact here."></textarea>
+    </div>
+  </div>
+</div>
 
+<div class="textmedium m-b-sm">
+  Action Tools:
+</div>
+<div class="columns">
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Accentuate the Positive
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Explore & Wonder
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Problem Talk
+    </label>
+  </div>
+</div>
+<div class="columns">
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Normalizing
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Be Present and Connect
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Strategic Accentuate the Positive
+    </label>
+  </div>
+</div>
+<div class="field-body m-b-sm m-t-sm">
+  <div class="field">
+    <div class="control">
+      <textarea class="textarea" placeholder="Give example."></textarea>
+    </div>
+  </div>
+</div>
 
+<div class="textmedium m-b-sm">
+  Daily Do's:
+</div>
+<div class="columns">
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      E-Parenting
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Character Builders
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Brain Builders
+    </label>
+  </div>
+</div>
+<div class="columns">
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      The 4 Steps to Success
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Play by Play
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Body BUilders
+    </label>
+  </div>
+</div>
+<div class="field-body m-b-sm m-t-sm">
+  <div class="field">
+    <div class="control">
+      <textarea class="textarea" placeholder="Give example."></textarea>
+    </div>
+  </div>
+</div>
 
+<div class="textmedium m-b-sm">
+  Progress made my family towards goals:
+</div>
+<div class="columns">
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      To be Established
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Set at Visit
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Problem Talk
+    </label>
+  </div>
+</div>
+<div class="columns">
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Progression
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Partner involved
+    </label>
+  </div>
+  <div class="column">
+    <label class="checkbox">
+      <input type="checkbox">
+      Barriers
+    </label>
+  </div>
+</div>
+<div class="field-body m-b-sm m-t-sm">
+  <div class="field">
+    <div class="control">
+      <textarea class="textarea" placeholder="Give example."></textarea>
+    </div>
+  </div>
+</div>
 
+<div class="textmedium m-b-sm">
+  Narrative: Describe how person(s) present responded to materials, activities and modules, etc.
+</div>
+<div class="field-body m-b-sm m-t-sm">
+  <div class="field">
+    <div class="control">
+      <textarea class="textarea" placeholder="Describe the contact here."></textarea>
+    </div>
+  </div>
+</div>
+
+<div class="textmedium m-b-sm">
+  Referrals accepted at last visit were acted upon by family:
+</div>
+<div class="columns m-t-sm m-l-md">
+  <div class-="column ">
+    <div class="control">
+      <label class="radio">
+        <input type="radio" name="answer">
+        Yes
+      </label>
+      <label class="radio">
+        <input type="radio" name="answer">
+        No
+      </label>
+      <label class="radio">
+        <input type="radio" name="answer">
+        None made at last visit
+      </label>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <textarea class="textarea" placeholder="Describe the contact here."></textarea>
+  </div>
+</div>
+
+<div class=textmedium>
+Follow-up plans:
+</div>
+<div class="column">
+    <input class="input" type="text" placeholder="Text input">
+</div>
+<div class=textmedium>
+Module:
+</div>
+<div class="column">
+    <input class="input" type="text" placeholder="Text input">
+</div>
+<div class=textmedium>
+Activity:
+</div>
+<div class="column">
+    <input class="input" type="text" placeholder="Text input">
+</div>
+<div class=textmedium>
+Next visit:
+</div>
+<div class="column m-l-md">
+  <div class="contact field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="select">
+            <select>
+              <option>Month</option>
+              <option>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+          </div>
+        </div>
+        <div class="field is-narrow">
+          <div class="select">
+            <select>
+              <option>Day</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <div class="select">
+            <select>
+              <option>Year</option>
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+            </select>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column is-2">
+    <p>FSW's Signature</p>
+  </div>
+  <div class="column is-4">
+      <input class="input" type="text" placeholder="Text input">
+  </div>
+  <div class="column is-1">
+    <p>Date</p>
+  </div>
+  <div class="column is-2">
+      <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-2">
+    <p>Reviewer's Signature</p>
+  </div>
+  <div class="column is-4">
+      <input class="input" type="text" placeholder="Text input">
+  </div>
+  <div class="column is-1">
+    <p>Date</p>
+  </div>
+  <div class="column is-2">
+      <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
 
 @endsection
