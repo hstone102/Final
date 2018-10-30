@@ -4,7 +4,7 @@
 
 <div class=" centertext m-b-xl textlarge">
 
-Which family would you like to write a contact or log for?
+Which client would you like to write a contact or log for?
 
 </div>
 
@@ -18,6 +18,10 @@ Which family would you like to write a contact or log for?
     </select>
   </div>
 </div>
+</div>
+
+<div class="control centertext m-t-lg m-b-xxl">
+  <button class="button is-info">Find Client</button>
 </div>
 
 
