@@ -23,6 +23,15 @@ Route::get('/initialScreen', function () {
     return view('initialScreen');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/reportIssue', function () {
+    return view('reportIssue');
+});
+
+
 Route::get('/supervisor/supervisorVisitReport', function () {
     return view('supervisor.supervisorVisitReport');
 });
@@ -84,4 +93,8 @@ Route::get('/employee/employeeProjectedCalendar', function () {
 
 Route::get('/employee/employeeVisitReport', function () {
     return view('employee/employeeVisitReport');
+});
+
+Route::get('/employee/employeeUrgentNeeds', function () {
+    return view('employee/employeeUrgentNeeds');
 });

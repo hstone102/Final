@@ -33,7 +33,7 @@
         </div>
           <div class="media-content">
             <div class="content">
-              <h4>Review a chart.</h4>
+              <h4>Review or Edit a chart.</h4>
             </div>
           </div>
       </article>

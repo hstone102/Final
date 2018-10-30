@@ -9,7 +9,7 @@
       <a href="/employee/employeeDashboard"class="navbar-item">
         Home
       </a>
-      <a class="navbar-item">
+      <a href="/employee/employeeUrgentNeeds"class="navbar-item">
         Urgent Needs
       </a>
       <div class="navbar-item has-dropdown is-hoverable">
@@ -21,10 +21,10 @@
           <a class="navbar-item">
             About
           </a>
-          <a class="navbar-item">
+          <a href="/reportIssue" class="navbar-item">
             Report an issue
           </a>
-          <a class="navbar-item">
+          <a href="/contact" class="navbar-item">
             Contact
           </a>
           <hr class="navbar-divider">
