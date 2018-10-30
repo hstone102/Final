@@ -310,6 +310,7 @@ function selection () {
         Visit Type
       </div>
     </div>
+  </div>
         <div class="columns">
           <div class="column m-l-md m-b-lg">
             <div class="field-body">
@@ -642,7 +643,6 @@ function selection () {
                 Interpreter
               </label>
             </div>
-
           </div>
           <div class="columns">
               <div class="column is-1">
@@ -870,124 +870,110 @@ function selection () {
             Forms Completed:
           </div>
           <div class="columns">
-            <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
-                N/A
-              </label>
-            </div>
-            <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
-                ASQ-3
-              </label>
-            </div>
-            <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                ASQ-SE2
-              </label>
-            </div>
-            <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                Child Status
-              </label>
-            </div>
-            <div class="column is-3">
-              <label class="checkbox">
-                <input type="checkbox">
-                Home Infant/Toddler Inventory
-              </label>
-            </div>
-            <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                Childproofing Checklist
-              </label>
-            </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  ASQ-3
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  ASQ-SE2
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Child Status
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Home Infant/Toddler Inventory
+                </label>
+              </div>
           </div>
           <div class="columns">
-            <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                Consent/Release
-              </label>
-            </div>
-            <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
-                EDS
-              </label>
-            </div>
-            <div class="column is-2">
-              <label class="checkbox">
-                <input type="checkbox">
-                Goal Sheet
-              </label>
-            </div>
-            <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                Primary Caregiver Status
-              </label>
-            </div>
-            <div class="column is-2">
-              <label class="checkbox">
-                <input type="checkbox">
-                Health Progress
-              </label>
-            </div>
-            <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
-                HIPAA
-              </label>
-            </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Childproofing Checklist
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Consent/Release
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  EDS
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Goal Sheet
+                </label>
+              </div>
           </div>
           <div class="columns">
-            <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                DV Screen
-              </label>
-            </div>
-            <div class="column is-3">
-              <label class="checkbox">
-                <input type="checkbox">
-                Mandatory Reporting/Referral
-              </label>
-            </div>
-            <div class="column is-5">
-              <label class="checkbox">
-                <input type="checkbox">
-                Parent-Home Visitor Partnership Agreement/Toy Safety
-              </label>
-            </div>
-            <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                Contact Information
-              </label>
-            </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Primary Caregiver Status
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Health Progress
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  HIPAA
+                </label>
+              </div>
+              <div class="column">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  DV Screen
+                </label>
+              </div>
           </div>
           <div class="columns">
-            <div class="column is-2">
-              <label class="checkbox">
-                <input type="checkbox">
-                Service Record
-              </label>
+                <div class="column">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Mandatory Reporting/Referral
+                  </label>
+                </div>
+                <div class="column">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Parent-Home Visitor Partnership Agreement/Toy Safety
+                  </label>
+                </div>
+                <div class="column">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Contact Information
+                  </label>
+                </div>
+                <div class="column">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Service Record
+                  </label>
+                </div>
             </div>
-            <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
-                Other
-              </label>
-            </div>
-            <div class="column">
-                <input class="input" type="text" placeholder="Text input">
-            </div>
-          </div>
+          <!-- </div> -->
 
           <div class="textmedium m-b-md">
             Parent/Child Interaction (describe behaviors and activities observed between the parent and child):
@@ -1363,7 +1349,7 @@ function selection () {
         <div class="control centertext m-b-xxl">
           <button class="button is-info">Submit Log</button>
         </div>
-  </div>
+    </div>
 </div>
 
 @endsection

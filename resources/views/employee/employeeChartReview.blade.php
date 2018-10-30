@@ -5,7 +5,7 @@
 <div id="client">
   <div class=" centertext m-b-xl textlarge">
 
-  Which client would you like to write a contact or log for?
+  Which client would you like to review or update?
 
   </div>
 
@@ -87,7 +87,7 @@ function selection () {
   <!-- Display the client name here -->
   <p class="textlarge centertext m-b-lg">What information would you like to enter?</p>
 
-  <div class="columns">
+<div class="columns">
     <div class="column">
       <label class="checkbox">
         <input type="checkbox">
