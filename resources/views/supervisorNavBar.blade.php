@@ -6,7 +6,7 @@
   </div>
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a href="/employee/employeeDashboard"class="navbar-item">
+      <a href="/supervisor/supervisorDashboard"class="navbar-item">
         Home
       </a>
       <a class="navbar-item">
