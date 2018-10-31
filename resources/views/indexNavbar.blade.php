@@ -1,9 +1,7 @@
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="logo">
-      <img src="bluelogo.png" width="75" height="25">
-  </div>
-  <div id="navbarBasicExample" class="navbar-menu">
+
+  <div id="navbarBasicExample" class="navbar-menu container">
     <div class="navbar-start">
       <a class="navbar-item">
         Home

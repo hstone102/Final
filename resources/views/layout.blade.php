@@ -7,9 +7,10 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="/css/app.css" rel="stylesheet" type="text/css">
   </head>
-  <body class="container">
+  <body>
 
     @include('indexNavbar')
+    <div>
 
       <h1 class="mt-3 mb-5">@yield('title')</h1>
 
@@ -25,5 +26,6 @@
         </section>
 
         @yield('content')
+    </div>
   </body>
 </html>
