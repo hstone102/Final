@@ -1,10 +1,5 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <div class="logo">
-        <img src="/bluelogo.png" width="75" height="25">
-    </div>
-  </div>
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div id="navbarBasicExample" class="navbar-menu container">
     <div class="navbar-start">
       <a href="/supervisor/supervisorDashboard"class="navbar-item">
         Home
