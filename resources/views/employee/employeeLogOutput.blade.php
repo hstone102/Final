@@ -152,27 +152,27 @@
   </div>
 </div>
 <div class="columns">
-  <div class="column p-xxs">
+  <div class="column m-l-sm p-xxs">
       <span class="textsmallbold">Module: </span><span> Basic Care</span>
   </div>
 </div>
 <div class="columns">
-  <div class="column p-xxs">
+  <div class="column m-l-sm p-xxs">
       <span class="textsmallbold">Activity: </span><span> Walk</span>
   </div>
 </div>
 <div class="columns">
-  <div class="column p-xxs">
+  <div class="column  m-l-smp-xxs">
       <span class="textsmallbold">Subsection: </span><span> Changing Needs of the Home</span>
   </div>
 </div>
 <div class="columns">
-  <div class="column p-xxs">
+  <div class="column  m-l-sm p-xxs">
       <span class="textsmallbold">Handout: </span><span> Avoiding Accidents</span>
   </div>
 </div>
 <div class="columns">
-  <div class="column p-xxs">
+  <div class="column m-l-sm p-xxs">
       <span class="textsmallbold">Demo: </span><span> None</span>
   </div>
 </div>
