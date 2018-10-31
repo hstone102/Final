@@ -98,3 +98,7 @@ Route::get('/employee/employeeVisitReport', function () {
 Route::get('/employee/employeeUrgentNeeds', function () {
     return view('employee/employeeUrgentNeeds');
 });
+
+Route::get('/employee/employeeContactOutput', function () {
+    return view('employee/employeeContactOutput');
+});
