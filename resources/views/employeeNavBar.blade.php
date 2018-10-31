@@ -1,11 +1,6 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <div class="logo">
-        <img src="/bluelogo.png" width="75" height="25">
-    </div>
-  </div>
   <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
+    <div class="navbar-start container">
       <a href="/employee/employeeDashboard"class="navbar-item">
         Home
       </a>
@@ -34,6 +29,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </nav>

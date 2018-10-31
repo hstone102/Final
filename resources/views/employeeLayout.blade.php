@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="/css/app.css" rel="stylesheet" type="text/css">
   </head>
-  <body class="container">
+  <body>
+      @include('employeeNavBar')
+    <div class="container">
 
-    @include('employeeNavBar')
+
 
       <h1 class="mt-3 mb-5">@yield('title')</h1>
 
@@ -26,5 +28,6 @@
         </section>
 
         @yield('content')
+    </div>
   </body>
 </html>

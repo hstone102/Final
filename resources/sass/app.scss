@@ -1,4 +1,9 @@
 
+
+
+$box-shadow: 0 2px 3px rgba(32,156,238, 0.7), 0 0 0 1px rgba(32,156,238, 0.7);
+$box-link-hover-shadow: 0 2px 3px rgba(32,156,238, 0.7), 0 0 0 1px rgba(32,156,238, 0.7);
+
 // Fonts
 @charset "utf-8";
 @import "~bulma/bulma.sass";
@@ -131,4 +136,16 @@
 .textsmallbold {
   font-size: 15px;
   font-weight: bold;
+}
+
+.navbar {
+  background-color: #209CEE;
+  width: 100%;
+  height: 70px;
+}
+
+.navbar-start {
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
 }
