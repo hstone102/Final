@@ -102,3 +102,7 @@ Route::get('/employee/employeeUrgentNeeds', function () {
 Route::get('/employee/employeeContactOutput', function () {
     return view('employee/employeeContactOutput');
 });
+
+Route::get('/employee/employeeLogOutput', function () {
+    return view('employee/employeeLogOutput');
+});

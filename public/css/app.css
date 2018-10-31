@@ -12498,3 +12498,12 @@ label.panel-block:hover {
   font-weight: bold;
 }
 
+.textsmall {
+  font-size: 15px;
+}
+
+.textsmallbold {
+  font-size: 15px;
+  font-weight: bold;
+}
+
