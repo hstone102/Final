@@ -106,3 +106,7 @@ Route::get('/employee/employeeContactOutput', function () {
 Route::get('/employee/employeeLogOutput', function () {
     return view('employee/employeeLogOutput');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
