@@ -49,22 +49,22 @@ function selection () {
 
 
 <!-- Write out an if statement that either displays the contact form or a log form  -->
+<!-- Write out an if statement that either displays the contact form or a log form  -->
+<form class="" method="post" action="/contacts">
+    @csrf
 <div id="contact" style="display:none">
   <div class="textmedium">
     <div class="columns">
-      <div class="column m-l-xxl">
-        Who was contacted
-      </div>
-      <div class="column m-l-md">
-        Time of Contact
-      </div>
+      <label for="name" class="column m-l-xxl"> Who was contacted</label>
+      <label for="start" class="column m-l-md"> Time of Contact </label>
+      <label for="end" class="column m-l-md"> End Time </label>
     </div>
 
       <div class="columns">
         <div class="column m-l-xxl">
           <div class="field">
             <div class="select">
-              <select>
+              <select id="name" name="name">
                 <option>Contact Person</option>
                 <option>Mother</option>
                 <option>Father</option>
@@ -79,7 +79,7 @@ function selection () {
               <div class="field-body">
                 <div class="field is-narrow">
                   <div class="select">
-                    <select>
+                    <select id="start_hour" name="start_hour">
                       <option>Hour</option>
                       <option>1</option>
                       <option>2</option>
@@ -98,17 +98,17 @@ function selection () {
                 </div>
                 <div class="field is-narrow">
                   <div class="select">
-                    <select>
+                    <select id="start_minute" name="start_minute">
                       <option>Minute</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
                       <option>10</option>
                       <option>11</option>
                       <option>12</option>
@@ -162,40 +162,13 @@ function selection () {
                     </select>
                   </div>
                 </div>
-                <div class="control">
                   <div class="select">
-                    <select>
+                    <select id="start_am_or_pm" name="start_am_or_pm">
                       <option>AM/PM</option>
                       <option>AM</option>
                       <option>PM</option>
                     </select>
                   </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column m-l-xxl">
-          Type of Contact
-        </div>
-        <div class="column m-l-md">
-          Date of Contact
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column m-l-xxl">
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>Type of Contact</option>
-                <option>No Show</option>
-                <option>Reschedule</option>
-                <option>Cancel</option>
-                <option>Group Event</option>
-                <option>Reminder</option>
-              </select>
             </div>
           </div>
         </div>
@@ -204,7 +177,126 @@ function selection () {
               <div class="field-body">
                 <div class="field is-narrow">
                   <div class="select">
-                    <select>
+                    <select id="end_hour" name="end_hour">
+                      <option>Hour</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field is-narrow">
+                  <div class="select">
+                    <select id="end_minute" name="end_minute">
+                      <option>Minute</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                      <option>13</option>
+                      <option>14</option>
+                      <option>15</optin>
+                      <option>16</opton>
+                      <option>17</opion>
+                      <option>18</otion>
+                      <option>19</ption>
+                      <option>20<option>
+                      <option>21</option>
+                      <option>22</option>
+                      <option>23</option>
+                      <option>24</option>
+                      <option>25</option>
+                      <option>26</option>
+                      <option>27</option>
+                      <option>28</option>
+                      <option>29</option>
+                      <option>30</option>
+                      <option>31</option>
+                      <option>32</option>
+                      <option>33</option>
+                      <option>34</option>
+                      <option>35</option>
+                      <option>36</option>
+                      <option>37</option>
+                      <option>38</option>
+                      <option>39</option>
+                      <option>40</option>
+                      <option>41</option>
+                      <option>42</option>
+                      <option>43</option>
+                      <option>44</option>
+                      <option>45</option>
+                      <option>46</option>
+                      <option>47</option>
+                      <option>48</option>
+                      <option>49</option>
+                      <option>50</option>
+                      <option>51</option>
+                      <option>52</option>
+                      <option>53</option>
+                      <option>54</option>
+                      <option>55</option>
+                      <option>56</option>
+                      <option>57</option>
+                      <option>58</option>
+                      <option>59</option>
+                    </select>
+                  </div>
+                </div>
+                  <div class="select">
+                    <select id="end_am_or_pm" name="end_am_or_pm">
+                      <option>AM/PM</option>
+                      <option>AM</option>
+                      <option>PM</option>
+                    </select>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="columns">
+        <label for="type" class="column m-l-xxl"> Type of Contact</label>
+        <label for="date" class="column m-l-md"> Date of Contact </label>
+      </div>
+      <div class="columns">
+        <div class="column m-l-xxl">
+            <div class="select">
+              <select id="type" name="type">
+                <option>Type of Contact</option>
+                <option>No Show</option>
+                <option>Reschedule</option>
+                <option>Cancel</option>
+                <option>Group Event</option>
+                <option>Reminder</option>
+              </select>
+            </div>
+        </div>
+        <div class="column m-l-md">
+          <div class="contact field is-horizontal">
+              <div class="field-body">
+                <div class="field is-narrow">
+                  <div class="select">
+                    <select id="date_month" name="date_month">
                       <option>Month</option>
                       <option>January</option>
                       <option>February</option>
@@ -223,7 +315,7 @@ function selection () {
                 </div>
                 <div class="field is-narrow">
                   <div class="select">
-                    <select>
+                    <select id="date_day" name="date_day">
                       <option>Day</option>
                       <option>1</option>
                       <option>2</option>
@@ -261,7 +353,7 @@ function selection () {
                 </div>
                 <div class="field">
                   <div class="select">
-                    <select>
+                    <select id="date_year" name="date_year">
                       <option>Year</option>
                       <option>2018</option>
                       <option>2019</option>
@@ -277,12 +369,12 @@ function selection () {
 
       <div class="field is-horizontal ">
         <div class="field-label is-normal m-b-xl">
-          <label class="label m-t-xl">Describe Contact</label>
+          <label for="comment" class="label m-t-xl">Describe Contact</label>
         </div>
         <div class="field-body m-b-xl m-t-xl">
           <div class="field">
             <div class="control">
-              <textarea class="textarea" placeholder="Describe the contact here."></textarea>
+              <textarea id="comment" name="comment" class="textarea" placeholder="Describe the contact here."></textarea>
             </div>
           </div>
         </div>
@@ -293,22 +385,18 @@ function selection () {
       </div>
   </div>
 </div>
+</form>
 
 
 
-
+<form class="" method="post" action="/logs">
+    @csrf
 <div id="log" style="display:none">
   <div class="textmedium">
     <div class="columns">
-      <div class="column m-l-md">
-        Date
-      </div>
-      <div class="column m-l-md">
-        Time
-      </div>
-      <div class="column m-l-md">
-        Visit Type
-      </div>
+      <label for="date" class="column m-l-md"> Date of Visit</label>
+      <label for="time" class="column m-l-md"> Time of Visit</label>
+      <label for="visit_type" class="column m-l-md"> Type of Visit</label>
     </div>
   </div>
         <div class="columns">
@@ -316,7 +404,7 @@ function selection () {
             <div class="field-body">
               <div class="field is-narrow">
                 <div class="select">
-                  <select>
+                  <select id="log_month" name="log_month">
                     <option>Month</option>
                     <option>January</option>
                     <option>February</option>
@@ -335,7 +423,7 @@ function selection () {
               </div>
               <div class="field is-narrow">
                 <div class="select">
-                  <select>
+                  <select id="log_day" name="log_day">
                     <option>Day</option>
                     <option>1</option>
                     <option>2</option>
@@ -373,7 +461,7 @@ function selection () {
               </div>
               <div class="field">
                 <div class="select">
-                  <select>
+                  <select id="log_year" name="log_year">
                     <option>Year</option>
                     <option>2018</option>
                     <option>2019</option>
@@ -388,7 +476,7 @@ function selection () {
                 <div class="field-body">
                   <div class="field is-narrow">
                     <div class="select">
-                      <select>
+                      <select id="log_hour" name="log_hour">
                         <option>Hour</option>
                         <option>1</option>
                         <option>2</option>
@@ -407,7 +495,7 @@ function selection () {
                   </div>
                   <div class="field is-narrow">
                     <div class="select">
-                      <select>
+                      <select id="log_minute" name="log_minute">
                         <option>Minute</option>
                         <option>1</option>
                         <option>2</option>
@@ -473,7 +561,7 @@ function selection () {
                   </div>
                   <div class="control">
                     <div class="select">
-                      <select>
+                      <select id="log_am_pm" name="log_am_pm">
                         <option>AM/PM</option>
                         <option>AM</option>
                         <option>PM</option>
@@ -486,7 +574,7 @@ function selection () {
             <div class="column">
               <div class="control">
                 <div class="select">
-                  <select>
+                  <select id="visit_type" name="visit_type">
                     <option>Type of Contact</option>
                     <option>Scheduled Visit</option>
                     <option>Out of Home Visit</option>
@@ -497,307 +585,295 @@ function selection () {
             </div>
           </div>
 
-
-          <div class="textmedium">
-            Referrals Made:
-          </div>
+          <label for="referrals" class="textmedium"> Referrals Made:</label>
 
           <div class="columns m-t-sm">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="basic_care" class="checkbox">
+                <input id="basic_care" name="basic_care"type="checkbox">
                 Basic Care
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="childcare"class="checkbox">
+                <input id="childcare" name="childcare"type="checkbox">
                 Childcare
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="dv"class="checkbox">
+                <input id="dv" name="dv"type="checkbox">
                 DV
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="education"class="checkbox">
+                <input id="education" name="education"type="checkbox">
                 Education
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="employment" class="checkbox">
+                <input id="employment" name="employment"type="checkbox">
                 Employment
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="first_steps" class="checkbox">
+                <input id="first_steps" name="first_steps"type="checkbox">
                 First Steps
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="health_department" class="checkbox">
+                <input id="health_department" name="health_department"type="checkbox">
                 Health Department
               </label>
             </div>
           </div>
           <div class="columns">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="mental_health" class="checkbox">
+                <input id="mental_health" name="mental_health"type="checkbox">
                 Mental Health
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="na" class="checkbox">
+                <input id="na" name="na"type="checkbox">
                 N/A
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="oral_hygiene"class="checkbox">
+                <input id="oral_hygiene" name="oral_hygiene"type="checkbox">
                 Oral Hygiene
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="physican" class="checkbox">
+                <input id="physican" name="physician"type="checkbox">
                 Physican
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="smoking" class="checkbox">
+                <input id="smoking" name="smoking"type="checkbox">
                 Smoking
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="substance_abuse" class="checkbox">
+                <input id="substance_abuse" name="substance_abuse"type="checkbox">
                 Substance Abuse
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="transportation" class="checkbox">
+                <input id="transportation" name="transportation"type="checkbox">
                 Transportation
               </label>
             </div>
           </div>
           <div class="columns">
             <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="other" class="checkbox">
+                <input id="other_referral" name="other_referral"type="checkbox">
                 Other
               </label>
             </div>
             <div class="column">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="other_referral" name="other_referral"class="input" type="text" placeholder="Text input">
             </div>
           </div>
 
-          <div class="textmedium m-b-md">
-            Who Was Present?
-          </div>
+          <label for="present" class="textmedium m-b-md"> Who Was Present?</label>
 
           <div class="columns">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="mother" class="checkbox">
+                <input id="mother" name="mother"type="checkbox">
                 Mother/Primary Caregiver
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="father"class="checkbox">
+                <input id="father" name="father"type="checkbox">
                 Father/Partner
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="temporary_custodian" class="checkbox">
+                <input id="temporary_custodian" name="temporary_custodian"type="checkbox">
                 Temporary Custodian
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="baby"class="checkbox">
+                <input id="baby" name="baby"type="checkbox">
                 Baby
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                Grandparents
+              <label for="grandparent" class="checkbox">
+                <input id="grandparent" name="grandparent"type="checkbox">
+                Grandparent
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="interpreter" class="checkbox">
+                <input id="interpreter" name="interpreter"type="checkbox">
                 Interpreter
               </label>
             </div>
           </div>
           <div class="columns">
               <div class="column is-1">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="friend" class="checkbox">
+                  <input id="friend" name="friend"type="checkbox">
                   Friend
                 </label>
               </div>
               <div class="column is-1">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="sibling" class="checkbox">
+                  <input id="sibling" name="sibling"type="checkbox">
                   Sibling
                 </label>
               </div>
               <div class="column is-1">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="other_person" class="checkbox">
+                  <input id="other_person" name="other_person" type="checkbox">
                   Other
                 </label>
               </div>
               <div class="column ">
-                  <input class="input" type="text" placeholder="Text input">
+                  <input id="other_person" name="other_person" class="input" type="text" placeholder="Text input">
               </div>
           </div>
 
 
           <div class="columns">
-            <div class="column is-three-quarters textmedium">
-              Do you have any concerns regarding your child's development, behavior, or learning?
-            </div>
+            <label for="concerns" class="column is-three-quarters textmedium"> Do you have any concerns regarding your child's development, behavior, or learning?</label>
             <div class="column">
               <div class="control">
-                <label class="radio">
-                  <input type="radio" name="answer">
+                <label for="concerns" class="radio">
+                  <input id="concerns" name="concerns" type="radio" value="1" name="concerns">
                   Yes
                 </label>
-                <label class="radio">
-                  <input type="radio" name="answer">
+                <label for="concerns" class="radio">
+                  <input id="concerns" name="concerns" type="radio" value="0" name="concerns">
                   No
                 </label>
               </div>
             </div>
           </div>
 
-          <div class="textmedium m-b-md">
-            Status of the Home
-          </div>
+          <label for="home_status" class="textmedium m-b-md"> Status of the Home</label>
 
           <div class="columns">
             <div class="column is-2">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="clean" class="checkbox">
+                <input id="clean" name="clean"type="checkbox">
                 Clean/Tidy
               </label>
             </div>
             <div class="column is-2">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="pets" class="checkbox">
+                <input id="pets" name="pets" type="checkbox">
                 Pets in the Home
               </label>
             </div>
             <div class="column is-2">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="smoking" class="checkbox">
+                <input id="smoking" name="smoking" type="checkbox">
                 Smoking in the Home
               </label>
             </div>
             <div class="column is-3">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="safe" class="checkbox">
+                <input id="safe" name="safe" type="checkbox">
                 Safe Area for Baby to Explore
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="toys" class="checkbox">
+                <input id="toys" name="toys" type="checkbox">
                 Age Appropriate Toys Available
               </label>
             </div>
           </div>
         <div class="columns">
             <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="home_other" class="checkbox">
+                <input id="home_other" name="home_other"type="checkbox">
                 Other
               </label>
             </div>
             <div class="column ">
-                <input class="input" type="text" placeholder="Text input">
+                <input id="home_other" name="home_other" class="input" type="text" placeholder="Text input">
             </div>
         </div>
 
-        <div class="textmedium m-b-md">
-          Status of the Persons Present
-        </div>
+        <label for="person_status" class="textmedium m-b-md"> Status of the Persons Present</label>
 
         <div class="columns">
           <div class="column">
-            <label class="checkbox">
-              <input type="checkbox">
+            <label for="engages" class="checkbox">
+              <input id="engages" name="engages"type="checkbox">
               Engages in Visit
             </label>
           </div>
           <div class="column">
-            <label class="checkbox">
-              <input type="checkbox">
+            <label for="difficult" class="checkbox">
+              <input id="difficult" name="difficult" type="checkbox">
               Difficult to Engage
             </label>
           </div>
           <div class="column">
-            <label class="checkbox">
-              <input type="checkbox">
+            <label for="attentive" class="checkbox">
+              <input id="attentive" name="attentive" type="checkbox">
               Attentive to Baby
             </label>
           </div>
           <div class="column">
-            <label class="checkbox">
-              <input type="checkbox">
+            <label for="redirection" class="checkbox">
+              <input id="redirection" name="redirection" type="checkbox">
               Needs Redirection
             </label>
           </div>
         </div>
         <div class="columns">
           <div class="column is-2">
-            <label class="checkbox">
-              <input type="checkbox">
+            <label for="person_additional" class="checkbox">
+              <input id="person_additional" name="person_additional"type="checkbox">
               Additional Information
             </label>
           </div>
           <div class="column ">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="person_additional" name="person_additional" class="input" type="text" placeholder="Text input">
           </div>
         </div>
 
-        <div class="textmedium m-b-md">
-          Curriculum Used
-        </div>
+        <label for="curriculum" class="textmedium m-b-md"> Curriculum Used</label>
 
           <div class="columns">
             <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="ggf" class="checkbox">
+                <input id="ggf" name="ggf" type="checkbox">
                 GGF
               </label>
             </div>
             <div class="column is-1">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="ggk" class="checkbox">
+                <input id="ggk" name="ggk" type="checkbox">
                 GGK
               </label>
             </div>
             <div class="column">
               <div class="control">
                 <div class="select">
-                  <select>
+                  <label for="curriculum_age">
+                  <select id="curriculum_age" name="curriculum_age">
                     <option>Prenatal</option>
                     <option>0-3 Months</option>
                     <option>4-6 Months</option>
@@ -809,166 +885,151 @@ function selection () {
                     <option>22-24 Months</option>
                     <option>25-36 Months</option>
                   </select>
+                </label>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="columns">
-            <div class="column is-1">
-              Module:
-            </div>
+            <label for="module" class="column is-1"> Module:</label>
             <div class="column">
-                <input class="input" type="text" placeholder="Text input">
+                <input id="module" name="module" class="input" type="text" placeholder="Text input">
             </div>
           </div>
           <div class="columns">
-            <div class="column is-1">
-              Activity:
-            </div>
+            <label for="activity" class="column is-1"> Activity:</label>
             <div class="column">
-                <input class="input" type="text" placeholder="Text input">
+                <input id="activity" name="activity" class="input" type="text" placeholder="Text input">
             </div>
           </div>
           <div class="columns">
-            <div class="column is-1">
-              Subsection:
-            </div>
+            <label for="subsection" class="column is-1"> Subsection:</label>
             <div class="column">
-                <input class="input" type="text" placeholder="Text input">
+                <input id="subsection" name="subsection" class="input" type="text" placeholder="Text input">
             </div>
           </div>
           <div class="columns">
-            <div class="column is-1">
-              Handout:
-            </div>
+            <label for="handout" class="column is-1"> Handout:</label>
             <div class="column">
-                <input class="input" type="text" placeholder="Text input">
+                <input id="handout" name="handout" class="input" type="text" placeholder="Text input">
             </div>
           </div>
           <div class="columns">
-            <div class="column is-1">
-              Demo:
-            </div>
+            <label for="demo" class="column is-1"> Demo:</label>
             <div class="column">
-                <input class="input" type="text" placeholder="Text input">
+                <input id="demo" name="demo" class="input" type="text" placeholder="Text input">
             </div>
           </div>
-          <div class="textmedium m-b-md">
-            List any additional subsections, activities or handouts utilized during the visit:
-          </div>
+          <label for="additional" class="textmedium m-b-md"> List any additional subsections, activities or handouts utilized during the visit:</label>
           <div class="column">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="additional" name="additional" class="input" type="text" placeholder="Text input">
           </div>
-          <div class="textmedium m-b-md">
-            List any other materials utilized during the visit:
-          </div>
+          <label for="materials" class="textmedium m-b-md"> List any other materials utilized during the visit:</label>
           <div class="column">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="materials" name="materials" class="input" type="text" placeholder="Text input">
           </div>
-          <div class="textmedium m-b-md">
-            Forms Completed:
-          </div>
+          <label for="forms" class="textmedium m-b-md"> Forms Completed:</label>
           <div class="columns">
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="asq" class="checkbox">
+                  <input id="asq" name="asq"type="checkbox">
                   ASQ-3
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="asq_se"class="checkbox">
+                  <input id="asq_se" name="asq_se"type="checkbox">
                   ASQ-SE2
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="child_status"class="checkbox">
+                  <input id="child_status" name="child_status" type="checkbox">
                   Child Status
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="home_inventory"class="checkbox">
+                  <input id="home_inventory" name="home_inventory" type="checkbox">
                   Home Infant/Toddler Inventory
                 </label>
               </div>
           </div>
           <div class="columns">
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="childproofing"class="checkbox">
+                  <input id="childproofing" name="childproofing" type="checkbox">
                   Childproofing Checklist
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="consent"class="checkbox">
+                  <input id="consent" name="consent" type="checkbox">
                   Consent/Release
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="eds" class="checkbox">
+                  <input id="eds" name="eds" type="checkbox">
                   EDS
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="goal"class="checkbox">
+                  <input id="goal" name="goal" type="checkbox">
                   Goal Sheet
                 </label>
               </div>
           </div>
           <div class="columns">
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="caregiver_status" class="checkbox">
+                  <input id="caregiver_status" name="caregiver_status" type="checkbox">
                   Primary Caregiver Status
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="health_progress" class="checkbox">
+                  <input id="health_progress" name="health_progress" type="checkbox">
                   Health Progress
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  HIPAA
+                <label for="hippa" class="checkbox">
+                  <input id="hippa" name="hippa" type="checkbox">
+                  HIPPA
                 </label>
               </div>
               <div class="column">
-                <label class="checkbox">
-                  <input type="checkbox">
+                <label for="dv_screen" class="checkbox">
+                  <input id="dv_screen" name="dv_screen" type="checkbox">
                   DV Screen
                 </label>
               </div>
           </div>
           <div class="columns">
                 <div class="column">
-                  <label class="checkbox">
-                    <input type="checkbox">
+                  <label for="mandatory" class="checkbox">
+                    <input id="mandatory" name="mandatory" type="checkbox">
                     Mandatory Reporting/Referral
                   </label>
                 </div>
                 <div class="column">
-                  <label class="checkbox">
-                    <input type="checkbox">
+                  <label for="partnership" class="checkbox">
+                    <input id="partnership" name="partnership" type="checkbox">
                     Parent-Home Visitor Partnership Agreement/Toy Safety
                   </label>
                 </div>
                 <div class="column">
-                  <label class="checkbox">
-                    <input type="checkbox">
+                  <label for="contact_information" class="checkbox">
+                    <input id="contact_information" name="contact_information" type="checkbox">
                     Contact Information
                   </label>
                 </div>
                 <div class="column">
-                  <label class="checkbox">
-                    <input type="checkbox">
+                  <label for="service_record" class="checkbox">
+                    <input id="service_record" name="service_record" type="checkbox">
                     Service Record
                   </label>
                 </div>
@@ -994,7 +1055,7 @@ function selection () {
               <div class="field-body m-b-xl m-t-sm">
                 <div class="field">
                   <div class="control">
-                    <textarea class="textarea" placeholder="Describe the cue here."></textarea>
+                    <textarea id="cue" name="cue" class="textarea" placeholder="Describe the cue here."></textarea>
                   </div>
                 </div>
               </div>
@@ -1003,7 +1064,7 @@ function selection () {
               <div class="field-body m-b-xl m-t-sm">
                 <div class="field">
                   <div class="control">
-                    <textarea class="textarea" placeholder="Describe the expression here."></textarea>
+                    <textarea id="expression" name="expression" class="textarea" placeholder="Describe the expression here."></textarea>
                   </div>
                 </div>
               </div>
@@ -1012,64 +1073,59 @@ function selection () {
               <div class="field-body m-b-xl m-t-sm">
                 <div class="field">
                   <div class="control">
-                    <textarea class="textarea" placeholder="Describe the empathy here."></textarea>
+                    <textarea id="empathy" name="empathy" class="textarea" placeholder="Describe the empathy here."></textarea>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="textmedium m-b-md">
-            Parent/Child Interaction (describe behaviors and activities observed between the parent and child):
-          </div>
+          <label for="interaction" class="textmedium m-b-md"> Parent/Child Interaction (describe behaviors and activities observed between the parent and child):</label>
 
           <div class="field-body m-b-xl m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea class="textarea" placeholder="Describe the contact here."></textarea>
+                <textarea id="interaction" name="interaction" class="textarea" placeholder="Describe the contact here."></textarea>
               </div>
             </div>
           </div>
 
-          <div class="textmedium m-b-sm">
-            Action Tools:
-          </div>
+          <label for="interaction" class="textmedium m-b-sm"> Action Tools:</label>
           <div class="columns">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="atp" class="checkbox">
+                <input id="atp" name="atp" type="checkbox">
                 Accentuate the Positive
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="explore_and_wonder" class="checkbox">
+                <input id="explore_and_wonder" name="explore_and_wonder" type="checkbox">
                 Explore & Wonder
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="problem_talk" class="checkbox">
+                <input id="problem_talk" name="problem_talk" type="checkbox">
                 Problem Talk
               </label>
             </div>
           </div>
           <div class="columns">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="normalizing" class="checkbox">
+                <input id="normalizing" name="normalizing" type="checkbox">
                 Normalizing
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="be_present" class="checkbox">
+                <input id="be_present" name="be_present" type="checkbox">
                 Be Present and Connect
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="satp" class="checkbox">
+                <input id="satp" name="satp" type="checkbox">
                 Strategic Accentuate the Positive
               </label>
             </div>
@@ -1077,101 +1133,93 @@ function selection () {
           <div class="field-body m-b-sm m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea class="textarea" placeholder="Give example."></textarea>
+                <textarea id="daily_do_example" name="daily_do_example" class="textarea" placeholder="Give example."></textarea>
               </div>
             </div>
           </div>
 
-          <div class="textmedium m-b-sm">
-            Daily Do's:
-          </div>
+          <label for="daily_dos" class="textmedium m-b-sm"> Daily Do's:</label>
+
           <div class="columns">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="e-parenting" class="checkbox">
+                <input id="e-parenting" name="e-parenting" type="checkbox">
                 E-Parenting
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="character_builders" class="checkbox">
+                <input id="character_builders" name="character_builders" type="checkbox">
                 Character Builders
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="brain_builders" class="checkbox">
+                <input id="brain_builders" name="brain_builders" type="checkbox">
                 Brain Builders
               </label>
             </div>
           </div>
           <div class="columns">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="4_steps" class="checkbox">
+                <input id="4_steps" name="4_steps" type="checkbox">
                 The 4 Steps to Success
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="play_by_play" class="checkbox">
+                <input id="play_by_play" name="play_by_play" type="checkbox">
                 Play by Play
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                Body BUilders
+              <label for="body_builders" class="checkbox">
+                <input id="body_builders" name="body_builders" type="checkbox">
+                Body Builders
               </label>
             </div>
           </div>
           <div class="field-body m-b-sm m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea class="textarea" placeholder="Give example."></textarea>
+                <textarea id="daily_dos" name="daily_dos" class="textarea" placeholder="Give example."></textarea>
               </div>
             </div>
           </div>
 
-          <div class="textmedium m-b-sm">
-            Progress made my family towards goals:
-          </div>
+          <label for="goal_progress" class="textmedium m-b-sm">   Progress made my family towards goals:</label>
+
           <div class="columns">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="to_be_established" class="checkbox">
+                <input id="to_be_established" name="to_be_established" type="checkbox">
                 To be Established
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="set_at_visit" class="checkbox">
+                <input id="set_at_visit" name="set_at_visit" type="checkbox">
                 Set at Visit
-              </label>
-            </div>
-            <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
-                Problem Talk
               </label>
             </div>
           </div>
           <div class="columns">
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="progression" class="checkbox">
+                <input id="progression" name="progression" type="checkbox">
                 Progression
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="partner_involved" class="checkbox">
+                <input id="partner_involved" name="partner_involved" type="checkbox">
                 Partner involved
               </label>
             </div>
             <div class="column">
-              <label class="checkbox">
-                <input type="checkbox">
+              <label for="barriers" class="checkbox">
+                <input id="barriers" name="barriers" type="checkbox">
                 Barriers
               </label>
             </div>
@@ -1179,38 +1227,35 @@ function selection () {
           <div class="field-body m-b-sm m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea class="textarea" placeholder="Give example."></textarea>
+                <textarea id="goal_progress" name="goal_progress" class="textarea" placeholder="Give example."></textarea>
               </div>
             </div>
           </div>
 
-          <div class="textmedium m-b-sm">
-            Narrative: Describe how person(s) present responded to materials, activities and modules, etc.
-          </div>
+          <label for="narrative" class="textmedium m-b-sm">   Narrative: Describe how person(s) present responded to materials, activities and modules, etc.</label>
+
           <div class="field-body m-b-sm m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea class="textarea" placeholder="Describe the contact here."></textarea>
+                <textarea id="narrative" name="narrative" class="textarea" placeholder="Describe the contact here."></textarea>
               </div>
             </div>
           </div>
+          <label for="referrals" class="textmedium m-b-sm">   Referrals accepted at last visit were acted upon by family:</label>
 
-          <div class="textmedium m-b-sm">
-            Referrals accepted at last visit were acted upon by family:
-          </div>
           <div class="columns m-t-sm m-l-md">
             <div class-="column ">
               <div class="control">
-                <label class="radio">
-                  <input type="radio" name="answer">
+                <label for="referrals" class="radio">
+                  <input value="1" type="radio" id="referral_yes"name="referrals">
                   Yes
                 </label>
                 <label class="radio">
-                  <input type="radio" name="answer">
+                  <input value="0" type="radio" id="referral_no" name="referrals">
                   No
                 </label>
                 <label class="radio">
-                  <input type="radio" name="answer">
+                  <input value="2" type="radio" id="referral_none" name="referrals">
                   None made at last visit
                 </label>
               </div>
@@ -1218,37 +1263,33 @@ function selection () {
           </div>
           <div class="field">
             <div class="control">
-              <textarea class="textarea" placeholder="Describe the contact here."></textarea>
+              <textarea id="referral_text" name="referral_text" class="textarea" placeholder="Describe the contact here."></textarea>
             </div>
           </div>
 
-          <div class=textmedium>
-          Follow-up plans:
-          </div>
+          <label for="follow_up" class="textmedium">   Follow-up plans:</label>
+
           <div class="column">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="follow_up" name="follow_up" class="input" type="text" placeholder="Text input">
           </div>
-          <div class=textmedium>
-          Module:
-          </div>
+          <label for="follow_up_module" class="textmedium">   Module:</label>
+
           <div class="column">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="follow_up_module" name="follow_up_module" class="input" type="text" placeholder="Text input">
           </div>
-          <div class=textmedium>
-          Activity:
-          </div>
+          <label for="follow_up_activity" class="textmedium">   Activity:</label>
+
           <div class="column">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="follow_up_activity" name="follow_up_activity" class="input" type="text" placeholder="Text input">
           </div>
-          <div class=textmedium>
-          Next visit:
-          </div>
+
+          <label for="next_visit" class="textmedium"> Next visit: </label>
           <div class="column m-l-md">
             <div class="contact field is-horizontal">
                 <div class="field-body">
                   <div class="field is-narrow">
                     <div class="select">
-                      <select>
+                      <select id="next_visit_month" name="next_visit_month" >
                         <option>Month</option>
                         <option>January</option>
                         <option>February</option>
@@ -1267,7 +1308,7 @@ function selection () {
                   </div>
                   <div class="field is-narrow">
                     <div class="select">
-                      <select>
+                      <select id="next_visit_day" name="next_visit_day">
                         <option>Day</option>
                         <option>1</option>
                         <option>2</option>
@@ -1305,7 +1346,7 @@ function selection () {
                   </div>
                   <div class="field">
                     <div class="select">
-                      <select>
+                      <select id="next_visit_year" name="next_visit_year">
                         <option>Year</option>
                         <option>2018</option>
                         <option>2019</option>
@@ -1322,13 +1363,13 @@ function selection () {
             <p>FSW's Signature</p>
           </div>
           <div class="column is-4">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="fsw_signature" name="fsw_signature" class="input" type="text" placeholder="Text input">
           </div>
           <div class="column is-1">
             <p>Date</p>
           </div>
           <div class="column is-2">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="fsw_date" name="fsw_date" class="input" type="text" placeholder="Text input">
           </div>
         </div>
         <div class="columns">
@@ -1336,13 +1377,13 @@ function selection () {
             <p>Reviewer's Signature</p>
           </div>
           <div class="column is-4">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="supervisor_signature" name="supervisor_signature"class="input" type="text" placeholder="Text input">
           </div>
           <div class="column is-1">
             <p>Date</p>
           </div>
           <div class="column is-2">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="supervisor_date" name="supervisor_date" class="input" type="text" placeholder="Text input">
           </div>
         </div>
 
@@ -1351,5 +1392,6 @@ function selection () {
         </div>
     </div>
 </div>
+</form>
 
 @endsection

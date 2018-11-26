@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start container">
-      <a href="/employee/employeeDashboard"class="navbar-item">
+      <a href="/employeeDashboard"class="navbar-item">
         Home
       </a>
       <a href="/employee/employeeUrgentNeeds"class="navbar-item">

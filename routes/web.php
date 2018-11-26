@@ -30,34 +30,34 @@ Route::get('/reportIssue', function () {
 });
 
 
-Route::get('/supervisor/supervisorVisitReport', function () {
+Route::get('/supervisorVisitReport', function () {
     return view('supervisor.supervisorVisitReport');
 });
 
-Route::get('/supervisor/supervisorReviewEvent', function () {
+Route::get('/supervisorReviewEvent', function () {
     return view('supervisor.supervisorReviewEvent');
 });
 
-Route::get('/supervisor/supervisorReviewChart', function () {
+Route::get('/supervisorReviewChart', function () {
     return view('supervisor.supervisorReviewChart');
 });
 
-Route::get('/supervisor/supervisorProjectedCalendar', function () {
+Route::get('/supervisorProjectedCalendar', function () {
     return view('supervisor.supervisorProjectedCalendar');
 });
 
-Route::get('/supervisor/supervisorEmployeeDashboard', function () {
+Route::get('/supervisorEmployeeDashboard', function () {
     return view('supervisor.supervisorEmployeeDashboard');
 });
 
-Route::get('/supervisor/supervisorDashboard', function () {
+Route::get('/supervisorDashboard', function () {
     return view('supervisor.supervisorDashboard');
 });
-Route::get('/supervisor/supervisorNewClient', function () {
+Route::get('/supervisorNewClient', function () {
     return view('supervisor.supervisorNewClient');
 });
 
-Route::get('/supervisor/supervisorInputData', function () {
+Route::get('/supervisorInputData', function () {
     return view('supervisor.supervisorInputData');
 });
 
@@ -65,46 +65,53 @@ Route::get('/supervisor/supervisorInputData', function () {
 
 
 
-Route::get('/employee/employeeChartReview', function () {
+Route::get('/employeeChartReview', function () {
     return view('employee.employeeChartReview');
 });
 
-Route::get('/employee/employeeDashboard', function () {
+Route::get('/employeeDashboard', function () {
     return view('employee.employeeDashboard');
 });
 
-Route::get('/employee/employeeInputContact', function () {
+Route::get('/employeeInputContact', function () {
     return view('employee.employeeInputContact');
 });
 
-Route::get('/employee/employeeInputData', function () {
+Route::get('/employeeInputData', function () {
     return view('employee.employeeInputData');
 });
 
-Route::get('/employee/employeeInputVisit', function () {
+Route::get('/employeeInputVisit', function () {
     return view('employee.employeeInputVisit');
 });
 
-Route::get('/employee/employeeProjectedCalendar', function () {
+Route::get('/employeeProjectedCalendar', function () {
     return view('employee.employeeProjectedCalendar');
 });
 
-Route::get('/employee/employeeVisitReport', function () {
+Route::get('/employeeVisitReport', function () {
     return view('employee/employeeVisitReport');
 });
 
-Route::get('/employee/employeeUrgentNeeds', function () {
+Route::get('/employeeUrgentNeeds', function () {
     return view('employee/employeeUrgentNeeds');
 });
 
-Route::get('/employee/employeeContactOutput', function () {
+Route::get('/employeeContactOutput', function () {
     return view('employee/employeeContactOutput');
 });
 
-Route::get('/employee/employeeLogOutput', function () {
+Route::get('/employeeLogOutput', function () {
     return view('employee/employeeLogOutput');
 });
 
+Route::get('/home', function () {
+  if (\Auth::user()->supervisor) {
+    return view('supervisor/supervisorDashboard');
+  }
+  else {
+    return view('employee/employeeDashboard');
+  }
+});
 
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/contacts', 'ContactController@store')->middleware('auth');
