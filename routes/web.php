@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
@@ -107,6 +105,6 @@ Route::get('/employee/employeeLogOutput', function () {
     return view('employee/employeeLogOutput');
 });
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
