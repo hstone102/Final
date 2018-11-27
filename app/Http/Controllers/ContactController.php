@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class ContactController extends Controller
 {
@@ -37,17 +38,34 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+      $tz= 'America/Kentucky/Louisville';
+
+      $year = $request->input('date_year');
+      $month = $request->input('date_month');
+      $day = $request->input('date_day');
+      $dt = Carbon::createFromDate($year, $month, $day);
+
+
+      $starthour = $request->input('start_hour');
+      $startminute = $request->input('start_minute');
+      $startseconds = "00";
+      $startam = $request->input('start_am_or_pm');
+      $starttime = Carbon::createFromTime($starthour, $startminute, $startseconds, $tz, $startam);
+
+
+      $endhour = $request->input('end_hour');
+      $endminute = $request->input('end_minute');
+      $endseconds = "00";
+      $endam = $request->input('end_am_or_pm');
+      $endtime = Carbon::createFromTime($endhour, $endminute, $endseconds, $tz, $endam);
 
         $contact = new \App\Contact;
         $contact->name = $request->input('name');
         $contact->user_id = \Auth::id();
         $contact->type = $request->input('type');
-        $contact->date = "carbon";
-        // date = $request->input('date');
-        $contact->start = "start";
-        // $request->input('start');
-        $contact->end = "end";
-        // $request->input('end');
+        $contact->date = $dt;
+        $contact->start = $starttime;
+        $contact->end = $endtime;
         $contact->comment = $request->input('comment');
         $contact->save();
         // $request->session()->flash('status', "A new list called <strong>{$list->name}</strong> was added!");

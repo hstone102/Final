@@ -1,15 +1,46 @@
 @extends('employeeLayout')
 
 @section('content')
+<div id="client">
+  <div class=" centertext m-b-xl textlarge">
 
-<!-- print out the client name at the top. -->
+  Which client would you like to input data on?
+
+  </div>
+
+  <div class="center">
+  <div class="control centertext">
+    <div class="select">
+      <select>
+        <option value="0">Select dropdown</option>
+        <option value="1">John</option>
+        <option value="2">Jane</option>
+      </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="control centertext m-t-lg m-b-xxl">
+    <button class="button is-info" onclick="selection2()">Find Client</button>
+  </div>
+</div>
+
+<script>
+
+function selection2 () {
 
 
-<div class="centertext m-b-md textlarge">
+  var x = document.getElementById("contactChoice");
+
+  x.style.display = "block";
+}
+</script>
+
+
+
+<div id="contactChoice" class="centertext m-b-md textlarge" style="display:none">
 
 Would you like to write a log or contact?
-
-</div>
 
 <div class="control centertext m-b-lg m-t-md">
   <div class="select">
@@ -20,6 +51,10 @@ Would you like to write a log or contact?
     </select>
   </div>
 </div>
+
+</div>
+
+
 
 <script>
 
@@ -48,7 +83,6 @@ function selection () {
 
 
 
-<!-- Write out an if statement that either displays the contact form or a log form  -->
 <!-- Write out an if statement that either displays the contact form or a log form  -->
 <form class="" method="post" action="/contacts">
     @csrf
@@ -81,15 +115,15 @@ function selection () {
                   <div class="select">
                     <select id="start_hour" name="start_hour">
                       <option>Hour</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
                       <option>10</option>
                       <option>11</option>
                       <option>12</option>
@@ -179,15 +213,15 @@ function selection () {
                   <div class="select">
                     <select id="end_hour" name="end_hour">
                       <option>Hour</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
                       <option>10</option>
                       <option>11</option>
                       <option>12</option>
@@ -297,19 +331,19 @@ function selection () {
                 <div class="field is-narrow">
                   <div class="select">
                     <select id="date_month" name="date_month">
-                      <option>Month</option>
-                      <option>January</option>
-                      <option>February</option>
-                      <option>March</option>
-                      <option>April</option>
-                      <option>May</option>
-                      <option>June</option>
-                      <option>July</option>
-                      <option>August</option>
-                      <option>September</option>
-                      <option>October</option>
-                      <option>November</option>
-                      <option>December</option>
+                      <option >Month</option>
+                      <option value="01">January</option>
+                      <option value="02">February</option>
+                      <option value="03">March</option>
+                      <option value="04">April</option>
+                      <option value="05">May</option>
+                      <option value="06">June</option>
+                      <option value="07">July</option>
+                      <option value="08">August</option>
+                      <option value="09">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
                     </select>
                   </div>
                 </div>
@@ -317,15 +351,15 @@ function selection () {
                   <div class="select">
                     <select id="date_day" name="date_day">
                       <option>Day</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
                       <option>10</option>
                       <option>11</option>
                       <option>12</option>
@@ -406,18 +440,18 @@ function selection () {
                 <div class="select">
                   <select id="log_month" name="log_month">
                     <option>Month</option>
-                    <option>January</option>
-                    <option>February</option>
-                    <option>March</option>
-                    <option>April</option>
-                    <option>May</option>
-                    <option>June</option>
-                    <option>July</option>
-                    <option>August</option>
-                    <option>September</option>
-                    <option>October</option>
-                    <option>November</option>
-                    <option>December</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
                   </select>
                 </div>
               </div>
@@ -425,15 +459,15 @@ function selection () {
                 <div class="select">
                   <select id="log_day" name="log_day">
                     <option>Day</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
                     <option>10</option>
                     <option>11</option>
                     <option>12</option>
@@ -478,15 +512,15 @@ function selection () {
                     <div class="select">
                       <select id="log_hour" name="log_hour">
                         <option>Hour</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
                         <option>10</option>
                         <option>11</option>
                         <option>12</option>
@@ -497,15 +531,15 @@ function selection () {
                     <div class="select">
                       <select id="log_minute" name="log_minute">
                         <option>Minute</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
                         <option>10</option>
                         <option>11</option>
                         <option>12</option>
@@ -1084,7 +1118,7 @@ function selection () {
           <div class="field-body m-b-xl m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea id="interaction" name="interaction" class="textarea" placeholder="Describe the contact here."></textarea>
+                <textarea id="interaction_example" name="interaction_example" class="textarea" placeholder="Describe the contact here."></textarea>
               </div>
             </div>
           </div>
@@ -1183,7 +1217,7 @@ function selection () {
           <div class="field-body m-b-sm m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea id="daily_dos" name="daily_dos" class="textarea" placeholder="Give example."></textarea>
+                <textarea id="daily_dos_example" name="daily_dos_example" class="textarea" placeholder="Give example."></textarea>
               </div>
             </div>
           </div>
@@ -1241,21 +1275,21 @@ function selection () {
               </div>
             </div>
           </div>
-          <label for="referrals" class="textmedium m-b-sm">   Referrals accepted at last visit were acted upon by family:</label>
+          <label for="referrals_last_visit" class="textmedium m-b-sm">   Referrals accepted at last visit were acted upon by family:</label>
 
           <div class="columns m-t-sm m-l-md">
             <div class-="column ">
               <div class="control">
-                <label for="referrals" class="radio">
-                  <input value="1" type="radio" id="referral_yes"name="referrals">
+                <label class="radio">
+                  <input value="1" type="radio" id="referral_yes"name="referrals_last_visit">
                   Yes
                 </label>
                 <label class="radio">
-                  <input value="0" type="radio" id="referral_no" name="referrals">
+                  <input value="0" type="radio" id="referral_no" name="referrals_last_visit">
                   No
                 </label>
                 <label class="radio">
-                  <input value="2" type="radio" id="referral_none" name="referrals">
+                  <input value="2" type="radio" id="referral_none" name="referrals_last_visit">
                   None made at last visit
                 </label>
               </div>
@@ -1291,18 +1325,18 @@ function selection () {
                     <div class="select">
                       <select id="next_visit_month" name="next_visit_month" >
                         <option>Month</option>
-                        <option>January</option>
-                        <option>February</option>
-                        <option>March</option>
-                        <option>April</option>
-                        <option>May</option>
-                        <option>June</option>
-                        <option>July</option>
-                        <option>August</option>
-                        <option>September</option>
-                        <option>October</option>
-                        <option>November</option>
-                        <option>December</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
                       </select>
                     </div>
                   </div>
@@ -1310,15 +1344,15 @@ function selection () {
                     <div class="select">
                       <select id="next_visit_day" name="next_visit_day">
                         <option>Day</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
                         <option>10</option>
                         <option>11</option>
                         <option>12</option>

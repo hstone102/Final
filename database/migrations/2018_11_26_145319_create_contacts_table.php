@@ -18,9 +18,9 @@ class CreateContactsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('type');
-            $table->string('date');
-            $table->string('start');
-            $table->string('end');
+            $table->date('date');
+            $table->time('start');
+            $table->time('end');
             $table->text('comment');
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');

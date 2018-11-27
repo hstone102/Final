@@ -6,7 +6,7 @@
 
 <div class="columns">
   <div class="column">
-    <a href="employeeInputData">
+    <a href="employeeInputContact">
     <div class="box m-b-lg">
       <article class="media">
         <div class="media-left">
