@@ -117,3 +117,5 @@ Route::get('/home', function () {
 Route::post('/contacts', 'ContactController@store')->middleware('auth');
 
 Route::post('/logs', 'LogsController@store')->middleware('auth');
+
+Route::post('/client', 'Client@store')->middleware('auth');

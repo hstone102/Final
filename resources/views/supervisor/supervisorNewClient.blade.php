@@ -2,38 +2,30 @@
 
 @section('content')
 
-<h2 class="centertext textlarge">Are you entering information on a Primary Caregiver or Baby?</h2>
-<div class="control m-t-sm centertext">
-  <div class="select">
-    <select>
-      <option>Select dropdown</option>
-      <option value="0">With options</option>
-      <option value="1">Primary Caregiver</option>
-      <option value="2">Baby</option>
-    </select>
-  </div>
-</div>
+<h2>Enter New Baby Information</h2>
 
-<div id="caregiver">
+<form class="" method="post" action="/client">
+  @csrf
+<div id="baby">
   <div class="columns m-t-md">
     <div class="column">
       <div class="control">
-        <input class="input" type="text" placeholder="First Name">
+        <input id="firstName" name="firstName" class="input" type="text" placeholder="First Name">
       </div>
     </div>
     <div class="column">
       <div class="control">
-        <input class="input" type="text" placeholder="Last Name">
+        <input id="lastName" name="lastName" class="input" type="text" placeholder="Last Name">
       </div>
     </div>
     <div class="column">
       <div class="control">
-        <input class="input" type="text" placeholder="SSN">
+        <input id="ssn" name="ssn" class="input" type="text" placeholder="SSN">
       </div>
     </div>
     <div class="column">
       <div class="control">
-        <input class="input" type="text" placeholder="Medicaid Number">
+        <input id="medicaid" name="medicaid" class="input" type="text" placeholder="Medicaid Number">
       </div>
     </div>
   </div>
@@ -46,26 +38,26 @@
           <div class="field-body">
             <div class="field is-narrow">
               <div class="select">
-                <select>
-                  <option>Month</option>
-                  <option>January</option>
-                  <option>February</option>
-                  <option>March</option>
-                  <option>April</option>
-                  <option>May</option>
-                  <option>June</option>
-                  <option>July</option>
-                  <option>August</option>
-                  <option>September</option>
-                  <option>October</option>
-                  <option>November</option>
-                  <option>December</option>
+                <select id="birth_month" name="birth_month">
+                  <option >Month</option>
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
                 </select>
               </div>
             </div>
             <div class="field is-narrow">
               <div class="select">
-                <select>
+                <select id="birth_day" name="birth_day">
                   <option>Day</option>
                   <option>1</option>
                   <option>2</option>
@@ -103,7 +95,7 @@
             </div>
             <div class="field">
               <div class="select">
-                <select>
+                <select id="birth_year" name="birth_year">
                   <option>Year</option>
                   <option>2018</option>
                   <option>2019</option>
@@ -123,36 +115,36 @@
           <div class="field-body">
             <div class="field is-narrow">
               <div class="select">
-                <select>
+                <select id="due_month" name="due_month">
                   <option>Month</option>
-                  <option>January</option>
-                  <option>February</option>
-                  <option>March</option>
-                  <option>April</option>
-                  <option>May</option>
-                  <option>June</option>
-                  <option>July</option>
-                  <option>August</option>
-                  <option>September</option>
-                  <option>October</option>
-                  <option>November</option>
-                  <option>December</option>
+                  <option value="01">January</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
                 </select>
               </div>
             </div>
             <div class="field is-narrow">
               <div class="select">
-                <select>
+                <select id="due_day" name="due_day">
                   <option>Day</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+                  <option>05</option>
+                  <option>06</option>
+                  <option>07</option>
+                  <option>08</option>
+                  <option>09</option>
                   <option>10</option>
                   <option>11</option>
                   <option>12</option>
@@ -180,7 +172,7 @@
             </div>
             <div class="field">
               <div class="select">
-                <select>
+                <select id="due_year" name="due_year">
                   <option>Year</option>
                   <option>2018</option>
                   <option>2019</option>
@@ -197,7 +189,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="ethnicity" name="ethnicity">
             <option>Ethnicity</option>
             <option>White</option>
             <option>Black</option>
@@ -215,7 +207,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="medical_home" name="medical_home">
             <option>Medical Home</option>
             <option>Yes</option>
             <option>No</option>
@@ -227,8 +219,8 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
-            <option>Marital Status</option>
+          <select id="marital_status" name="marital_status">
+            <option>Parent Marital Status</option>
             <option>Married</option>
             <option>Single</option>
             <option>Divorced</option>
@@ -242,7 +234,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="number_of_persons" name = "number_of_persons">
             <option># Persons in Household</option>
             <option>1</option>
             <option>2</option>
@@ -262,7 +254,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="income" name="income">
             <option>Annual Household Income</option>
             <option>0-5,000</option>
             <option>5001-10,000</option>
@@ -284,7 +276,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="insurance" name="insurance">
             <option>Insurance Coverage</option>
             <option>Medicaid</option>
             <option>Private</option>
@@ -297,7 +289,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="primary_care" name="primary_care">
             <option>Primary Care Provider</option>
             <option>Private</option>
             <option>Health Department</option>
@@ -311,7 +303,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="prenatal_vitamin" name="prenatal_vitamin">
             <option>Prenatal Vitamins</option>
             <option>Yes</option>
             <option>No</option>
@@ -323,7 +315,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="nutritional_counseling" name="nutritional_counseling">
             <option>Nutrition Counseling</option>
             <option>Yes</option>
             <option>No</option>
@@ -338,7 +330,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="smoking_in_home" name="smoking_in_home">
             <option>Smoking in Home</option>
             <option>Yes</option>
             <option>No</option>
@@ -350,7 +342,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="employment_status" name="employment_status">
             <option>Employment</option>
             <option>Employed full time</option>
             <option>Employed part time</option>
@@ -366,7 +358,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="education_enrollment" name="education_enrollment">
             <option>Education Enrollment Status</option>
             <option>Not Enrolled</option>
             <option>8th Grade or below</option>
@@ -384,7 +376,7 @@
     <div class="column">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="educational_level" name="educational_level">
             <option>Education Level</option>
             <option>8th Grade or below</option>
             <option>High School</option>
@@ -402,22 +394,44 @@
       <div class="columns  m-t-md">
         <div class="column">
           <div class="control">
-            <input class="input" type="text" placeholder="Partner First Name">
+            <input id="parent_first_name" name="parent_first_name" class="input" type="text" placeholder="Parent First Name">
           </div>
         </div>
         <div class="column">
           <div class="control">
-            <input class="input" type="text" placeholder="Partner Last Name">
+            <input id="parent_last_name" name="parent_last_name" class="input" type="text" placeholder="Parent Last Name">
           </div>
         </div>
         <div class="column">
           <div class="control">
-            <input class="input" type="text" placeholder=" Partner SSN">
+            <input id="parent_ssn" name="parent_ssn" class="input" type="text" placeholder=" Parent SSN">
           </div>
         </div>
         <div class="column">
           <div class="control">
-            <input class="input" type="text" placeholder=" Partner Medicaid Number">
+            <input id="parent_medicaid" name="parent_medicaid" class="input" type="text" placeholder=" Parent Medicaid Number">
+          </div>
+        </div>
+      </div>
+      <div class="columns  m-t-md">
+        <div class="column">
+          <div class="control">
+            <input id="partner_first_name" name="partner_first_name" class="input" type="text" placeholder="Partner First Name">
+          </div>
+        </div>
+        <div class="column">
+          <div class="control">
+            <input id="partner_last_name" name="partner_last_name" class="input" type="text" placeholder="Partner Last Name">
+          </div>
+        </div>
+        <div class="column">
+          <div class="control">
+            <input id="partner_ssn" name="partner_ssn" class="input" type="text" placeholder=" Partner SSN">
+          </div>
+        </div>
+        <div class="column">
+          <div class="control">
+            <input id="partner_medicaid" name="partner_medicaid" class="input" type="text" placeholder=" Partner Medicaid Number">
           </div>
         </div>
       </div>
@@ -425,7 +439,7 @@
     <div class="column m-b-xl">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="partner_employment" name="partner_employment">
             <option>Employment</option>
             <option>Employed full time</option>
             <option>Employed part time</option>
@@ -441,7 +455,7 @@
     <div class="column m-b-xl">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="partner_education" name="partner_education">
             <option>Education Level</option>
             <option>8th Grade or below</option>
             <option>High School</option>
@@ -458,7 +472,7 @@
     <div class="column m-b-xl">
       <div class="control">
         <div class="select">
-          <select>
+          <select id="partner_education_status" name="partner_education_status">
             <option>Education Enrollment Status</option>
             <option>Not Enrolled</option>
             <option>8th Grade or below</option>
@@ -474,21 +488,11 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
-
-<div id="baby">
+<div class="control centertext m-b-xxl">
+  <button class="button is-info">Submit</button>
 </div>
+</form>
+
 @endsection
