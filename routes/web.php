@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,7 +60,8 @@ Route::get('/supervisorNewClient', function () {
 });
 
 Route::get('/supervisorInputData', function () {
-    return view('supervisor.supervisorInputData');
+    $b = \App\Client::all();
+    return view('supervisor.supervisorInputData', compact('b'));
 });
 
 
@@ -66,7 +69,8 @@ Route::get('/supervisorInputData', function () {
 
 
 Route::get('/employeeChartReview', function () {
-    return view('employee.employeeChartReview');
+    $e = \App\Client::all();
+    return view('employee.employeeChartReview', compact('e'));
 });
 
 Route::get('/employeeDashboard', function () {
@@ -74,7 +78,8 @@ Route::get('/employeeDashboard', function () {
 });
 
 Route::get('/employeeInputContact', function () {
-    return view('employee.employeeInputContact');
+    $b = \App\Client::all();
+    return view('employee.employeeInputContact', compact('b'));
 });
 
 Route::get('/employeeInputData', function () {
@@ -86,7 +91,39 @@ Route::get('/employeeInputVisit', function () {
 });
 
 Route::get('/employeeProjectedCalendar', function () {
-    return view('employee.employeeProjectedCalendar');
+    $logs = \App\Log::all();
+
+    $initialMonday = Carbon::parse('first Monday of December 2018');
+    $initialMonday = $initialMonday->format('MM DD YYYY');
+    $initialTuesday = Carbon::parse('first Monday of December 2018')->addDays(1);
+    $initialTuesday = $initialTuesday->format('MM DD YYYY');
+
+
+    $monday = array();
+    $tuesday = array();
+    $wednesday = array();
+    $thursday = array();
+    $friday = array();
+
+    foreach ($logs as $log) {
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialMonday == $adjustedDate){
+        array_push ($monday, $log);
+      }
+    }
+
+    foreach ($logs as $log) {
+
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialTuesday == $adjustedDate){
+        array_push ($tuesday, $log);
+      }
+    }
+
+    return view('employee.employeeProjectedCalendar', compact('monday', 'tuesday', 'wednesday', 'thursday', 'friday'));
+
 });
 
 Route::get('/employeeVisitReport', function () {

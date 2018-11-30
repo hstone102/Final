@@ -4,7 +4,8 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Log::class, function (Faker $faker) {
     return [
-
+      'client_id' => DB::table('clients')->inRandomOrder()->first()->id,
+      'user_id' => DB::table('users')->inRandomOrder()->first()->id,
       'date' => $faker->date($format = 'Y-m-d', $max = 'now'),
       'time' => $faker->time($format = 'H:i:s', $max = 'now'),
       'visit_type' => $faker->randomElement(['Scheduled Visit', 'Out of Home Visit', 'Caregiver Visit']),
@@ -92,7 +93,7 @@ $factory->define(App\Log::class, function (Faker $faker) {
       'progression'  => $faker->randomElement(['true', 'false']),
       'partner_involved'  => $faker->randomElement(['true', 'false']),
       'barriers'  => $faker->randomElement(['true', 'false']),
-      'narrative' => $faker->text($maxNbChars = 300),
+      'narrative' => $faker->text($maxNbChars = 150),
       'referrals_last_visit' => $faker->randomElement(['0', '1', '2']),
       'referral_text' => $faker->text($maxNbChars = 100),
       'follow_up' => $faker->text($maxNbChars = 50),

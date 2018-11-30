@@ -11,13 +11,8 @@ class ContactsTableSeeder extends Seeder
      */
     public function run()
     {
+
+      $contacts = factory(App\Contact::class, 30)->create();
         //
-        'name'
-        'user_id'
-        'type'
-        'date'
-        'start'
-        'end'
-        'comment'
     }
 }

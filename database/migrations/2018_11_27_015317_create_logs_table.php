@@ -18,6 +18,7 @@ class CreateLogsTable extends Migration
             $table->timestamps();
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->string('client_id');
             $table->string('date');
             $table->string('time');
             $table->string('visit_type');
@@ -105,7 +106,7 @@ class CreateLogsTable extends Migration
             $table->string('progression');
             $table->string('partner_involved');
             $table->string('barriers');
-            $table->string('narrative');
+            $table->text('narrative');
             $table->string('referrals_last_visit');
             $table->string('referral_text');
             $table->string('follow_up');

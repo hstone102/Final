@@ -54,8 +54,10 @@ class LogsController extends Controller
       $nextVisitDay = $request->input('next_visit_day');
       $nv = Carbon::createFromDate($nextVisitYear, $nextVisitMonth, $nextVisitDay);
 
+      
 
       $log = new \App\Log;
+      $log->client_id = $request->input('client_id');
       $log->date = $dt;
       $log->time = $time;
       $log->visit_type = $request->input('visit_type');

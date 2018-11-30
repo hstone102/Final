@@ -14,8 +14,10 @@
     <div class="select">
       <select>
         <option>Select dropdown</option>
-        <option>With options</option>
-        <option>Use for each to get names from database</option>
+
+        @foreach ($e as $f)
+        <option value="{{$f->id}}">{{$f->firstName }} {{$f->lastName }}</option>
+        @endforeach
       </select>
     </div>
   </div>

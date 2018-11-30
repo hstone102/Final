@@ -11,6 +11,8 @@ $factory->define(App\Contact::class, function (Faker $faker) {
       'start' => $faker->time($format = 'H:i:s', $max = 'now'),
       'end' => $faker->time($format = 'H:i:s', $max = 'now'),
       'comment' => $faker->text($maxNbChars = 50),
+      'user_id' =>  DB::table('users')->inRandomOrder()->first()->id,
+      'client_id' => DB::table('clients')->inRandomOrder()->first()->id
         //
     ];
 });

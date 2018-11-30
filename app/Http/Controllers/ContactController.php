@@ -61,6 +61,7 @@ class ContactController extends Controller
 
         $contact = new \App\Contact;
         $contact->name = $request->input('name');
+        $contact->client_id = $request->input('client_id');
         $contact->user_id = \Auth::id();
         $contact->type = $request->input('type');
         $contact->date = $dt;

@@ -11,10 +11,12 @@
   <div class="center">
   <div class="control centertext">
     <div class="select">
-      <select>
+      <select id="client_select">
         <option value="0">Select dropdown</option>
-        <option value="1">John</option>
-        <option value="2">Jane</option>
+
+        @foreach ($b as $c)
+        <option value="{{$c->id}}">{{$c->firstName }} {{$c->lastName }}</option>
+        @endforeach
       </select>
     </div>
   </div>
@@ -60,9 +62,11 @@ Would you like to write a log or contact?
 
 function selection () {
 
-
+  var client_id = document.getElementById("client_select").value;
+  document.getElementById("client_id").value = client_id;
+  document.getElementById("log_client_id").value = client_id;
   var x = document.getElementById("contact");
-  var y = document.getElementById("log")
+  var y = document.getElementById("log");
 
   if (document.getElementById("select").value == "2"){
     x.style.display = "block";
@@ -86,6 +90,8 @@ function selection () {
 <!-- Write out an if statement that either displays the contact form or a log form  -->
 <form class="" method="post" action="/contacts">
     @csrf
+
+    <input id="client_id" name="client_id" type="hidden" value="">
 <div id="contact" style="display:none">
   <div class="textmedium">
     <div class="columns">
@@ -425,6 +431,9 @@ function selection () {
 
 <form class="" method="post" action="/logs">
     @csrf
+
+<input id="log_client_id" name="client_id" type="hidden" value="">
+
 <div id="log" style="display:none">
   <div class="textmedium">
     <div class="columns">
@@ -1118,7 +1127,7 @@ function selection () {
           <div class="field-body m-b-xl m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea id="interaction_example" name="interaction_example" class="textarea" placeholder="Describe the contact here."></textarea>
+                <textarea id="interaction" name="interaction" class="textarea" placeholder="Describe the contact here."></textarea>
               </div>
             </div>
           </div>
@@ -1167,7 +1176,7 @@ function selection () {
           <div class="field-body m-b-sm m-t-sm">
             <div class="field">
               <div class="control">
-                <textarea id="daily_do_example" name="daily_do_example" class="textarea" placeholder="Give example."></textarea>
+                <textarea id="interaction_example" name="interaction_example" class="textarea" placeholder="Give example."></textarea>
               </div>
             </div>
           </div>
@@ -1280,15 +1289,15 @@ function selection () {
           <div class="columns m-t-sm m-l-md">
             <div class-="column ">
               <div class="control">
-                <label class="radio">
+                <label for="referrals_last_visit" class="radio">
                   <input value="1" type="radio" id="referral_yes"name="referrals_last_visit">
                   Yes
                 </label>
-                <label class="radio">
+                <label for="referrals_last_visit" class="radio">
                   <input value="0" type="radio" id="referral_no" name="referrals_last_visit">
                   No
                 </label>
-                <label class="radio">
+                <label  for="referrals_last_visit" class="radio">
                   <input value="2" type="radio" id="referral_none" name="referrals_last_visit">
                   None made at last visit
                 </label>

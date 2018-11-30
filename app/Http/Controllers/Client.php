@@ -71,7 +71,6 @@ class Client extends Controller
       $client->partner_education = $request->input('partner_education');
       $client->partner_education_status = $request->input('partner_education_status');
       $client->save();
-      dd($client);
 
         //
     }
