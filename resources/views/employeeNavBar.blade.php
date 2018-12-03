@@ -4,7 +4,7 @@
       <a href="/employeeDashboard"class="navbar-item">
         Home
       </a>
-      <a href="/employee/employeeUrgentNeeds"class="navbar-item">
+      <a href="/employeeUrgentNeeds"class="navbar-item">
         Urgent Needs
       </a>
       <div class="navbar-item has-dropdown is-hoverable">

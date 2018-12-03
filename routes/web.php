@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Carbon\Carbon;
 
 /*
@@ -167,11 +168,13 @@ Route::get('/employeeUrgentNeeds', function () {
     return view('employee/employeeUrgentNeeds');
 });
 
-Route::get('/employeeContactOutput', function () {
-    return view('employee/employeeContactOutput');
+Route::get('/employeeContactOutput/{id}', function (Request $request, $id) {
+    $contact = \App\Contact::find($id);
+    return view('employee/employeeContactOutput', compact('contact'));
 });
 
-Route::get('/employeeLogOutput', function () {
+Route::get('/employeeLogOutput/{id}', function (Request $request) {
+    $log = \App\Log::all();
     return view('employee/employeeLogOutput');
 });
 
@@ -182,6 +185,16 @@ Route::get('/home', function () {
   else {
     return view('employee/employeeDashboard');
   }
+});
+
+Route::get('/employeeClientFile', function (Request $request){
+
+  $client = \App\Client::find($request->input('client_id'));
+
+  $contact = \App\Contact::all();
+  $log = \App\Log::all();
+
+  return view('employee/employeeClientFile', compact('client'));
 });
 
 Route::post('/contacts', 'ContactController@store')->middleware('auth');

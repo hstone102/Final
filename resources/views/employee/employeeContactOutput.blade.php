@@ -9,18 +9,18 @@
     <span class="textsmallbold">Contact made by:</span> <span class="textsmall">Holly Stone<span>
   </div>
   <div class="column textsmall">
-    <span class="textsmallbold">Start time:</span> <span class="textsmall">12:33 pm<span>
+    <span class="textsmallbold">Start time:</span> <span class="textsmall">{{$contact->start}}<span>
   </div>
   <div class="column textsmall">
-    <span class="textsmallbold">End time:</span> <span class="textsmall">12:35 pm<span>
+    <span class="textsmallbold">End time:</span> <span class="textsmall">{{$contact->end}}<span>
   </div>
 </div>
 <div class="columns">
   <div class="column textsmall">
-    <span class="textsmallbold">Date:</span> <span class="textsmall">October 31, 2018<span>
+    <span class="textsmallbold">Date:</span> <span class="textsmall">Jan. 2, 2012<span>
   </div>
   <div class="column textsmall">
-    <span class="textsmallbold">Family level:</span> <span class="textsmall">2<span>
+    <span class="textsmallbold">Family level:</span> <span class="textsmall">{{contact->level}}<span>
   </div>
   <div class="column textsmall">
     <span class="textsmallbold">Person contacted:</span> <span class="textsmall">Mother<span>
