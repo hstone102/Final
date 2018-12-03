@@ -97,6 +97,12 @@ Route::get('/employeeProjectedCalendar', function () {
     $initialMonday = $initialMonday->format('MM DD YYYY');
     $initialTuesday = Carbon::parse('first Monday of December 2018')->addDays(1);
     $initialTuesday = $initialTuesday->format('MM DD YYYY');
+    $initialWednesday = Carbon::parse('first Monday of December 2018')->addDays(2);
+    $initialWednesday = $initialWednesday->format('MM DD YYYY');
+    $initialThursday = Carbon::parse('first Monday of December 2018')->addDays(3);
+    $initialThursday = $initialThursday->format('MM DD YYYY');
+    $initialFriday = Carbon::parse('first Monday of December 2018')->addDays(4);
+    $initialFriday = $initialFriday->format('MM DD YYYY');
 
 
     $monday = array();
@@ -119,6 +125,33 @@ Route::get('/employeeProjectedCalendar', function () {
 
       if ($initialTuesday == $adjustedDate){
         array_push ($tuesday, $log);
+      }
+    }
+
+    foreach ($logs as $log) {
+
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialWednesday == $adjustedDate){
+        array_push ($wednesday, $log);
+      }
+    }
+
+    foreach ($logs as $log) {
+
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialThursday == $adjustedDate){
+        array_push ($thursday, $log);
+      }
+    }
+
+    foreach ($logs as $log) {
+
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialFriday == $adjustedDate){
+        array_push ($friday, $log);
       }
     }
 

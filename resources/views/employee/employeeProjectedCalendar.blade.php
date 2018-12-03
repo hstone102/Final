@@ -3,8 +3,15 @@
 @section('content')
 
 <h2 class="textlarge centertext m-b-md">Predictive Calendar</h2>
+<div class="centertext">
+<p class="green-box center"></p>Green indiates low-cancellation and no-show rate.
+<p class="yellow-box center m-t-sm"></p>Yellow indiates moderate cancellation and no-show rate.
+<p class="red-box center m-t-sm"></p>Red indiates high cancellation and no-show rate.
+</div>
 
-<h2 class="textmedium centertext m-b-md">This Week's Schedule</h2>
+
+<h2 class="textmedium centertext m-t-md m-b-md">This Week's Schedule</h2>
+
 
 
 
@@ -35,7 +42,7 @@
           <ul>
             @foreach ($monday as $item)
 
-            <li value="{{$item->client_id}}">{{$item->client->firstName}}</li>
+            <li class="underline"value="{{$item->client_id}}">{{$item->client->firstName}}<div class="indicator {{ $item->client->cancellation_frequency() }}" </div> </li>
             @endforeach
 
           </ul>
@@ -48,7 +55,7 @@
           <ul>
             @foreach ($tuesday as $item)
 
-            <li value="{{$item->client_id}}">{{$item->client->firstName}}</li>
+            <li class="underline"value="{{$item->client_id}}">{{$item->client->firstName}}<div class="indicator {{ $item->client->cancellation_frequency() }}" </div> </li>
             @endforeach
 
           </ul>
@@ -58,21 +65,39 @@
     <div class="column">
       <div class="box m-b-lg">
         <div class="content">
-          <h4>Write a log or contact.</h4>
+          <ul>
+            @foreach ($wednesday as $item)
+
+            <li class="underline"value="{{$item->client_id}}">{{$item->client->firstName}}<div class="indicator {{ $item->client->cancellation_frequency() }}" </div> </li>
+            @endforeach
+
+          </ul>
         </div>
       </div>
     </div>
     <div class="column">
       <div class="box m-b-lg">
         <div class="content">
-          <h4>Write a log or contact.</h4>
+          <ul>
+            @foreach ($thursday as $item)
+
+            <li class="underline" value="{{$item->client_id}}">{{$item->client->firstName}}<div class="indicator {{ $item->client->cancellation_frequency() }}" </div> </li>
+            @endforeach
+
+          </ul>
         </div>
       </div>
     </div>
     <div class="column">
       <div class="box m-b-lg">
         <div class="content">
-          <h4>Write a log or contact.</h4>
+          <ul>
+            @foreach ($friday as $item)
+
+            <li class="underline"value="{{$item->client_id}}">{{$item->client->firstName}}<div class="indicator {{ $item->client->cancellation_frequency() }}" </div> </li>
+            @endforeach
+
+          </ul>
         </div>
       </div>
     </div>

@@ -149,3 +149,61 @@ $box-link-hover-shadow: 0 2px 3px rgba(32,156,238, 0.7), 0 0 0 1px rgba(32,156,2
   font-weight: bold;
   font-size: 20px;
 }
+
+.cancel-low{
+  border-radius: 5px;
+  float: right;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background: green;
+}
+
+.cancel-medium {
+  border-radius: 5px;
+  float: right;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background: yellow;
+}
+
+.cancel-high {
+  border-radius: 5px;
+  float: right;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background: red;
+}
+
+.green-box{
+  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background: green;
+}
+
+.yellow-box {
+  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background: yellow;
+}
+
+.red-box {
+  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  background: red;
+}
+
+.underline {
+  text-decoration: underline;
+}
