@@ -1,4 +1,4 @@
-@extends('employeeLayout')
+@extends('supervisorLayout')
 
 @section('content')
 

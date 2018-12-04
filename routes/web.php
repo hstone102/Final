@@ -42,11 +42,14 @@ Route::get('/supervisorReviewEvent', function () {
 });
 
 Route::get('/supervisorReviewChart', function () {
-    return view('supervisor.supervisorReviewChart');
+
+    $k = \App\Client::all();
+    return view('supervisor.supervisorReviewChart', compact('k'));
 });
 
 Route::get('/supervisorProjectedCalendar', function () {
-    return view('supervisor.supervisorProjectedCalendar');
+    $staff = \App\User::all();
+    return view('supervisor.supervisorProjectedCalendar', compact('staff'));
 });
 
 Route::get('/supervisorEmployeeDashboard', function () {
@@ -64,6 +67,99 @@ Route::get('/supervisorInputData', function () {
     $b = \App\Client::all();
     return view('supervisor.supervisorInputData', compact('b'));
 });
+
+Route::get('/supervisorClientFile', function (Request $request){
+
+  $client = \App\Client::find($request->input('client_id'));
+
+  $contact = \App\Contact::all();
+  $log = \App\Log::all();
+
+  return view('supervisor/supervisorClientFile', compact('client'));
+});
+
+Route::get('/supervisorContactOutput/{id}', function (Request $request, $id) {
+    $contact = \App\Contact::find($id);
+    return view('supervisor/supervisorContactOutput', compact('contact'));
+});
+
+Route::get('/supervisorLogOutput/{id}', function (Request $request, $id) {
+    $log = \App\Log::find($id);
+    return view('supervisor/supervisorLogOutput', compact('log'));
+});
+
+Route::get('/supervisorCalendarStaff', function (Request $request) {
+    $user = \App\User::find($request->input('user_id'));
+    $logs = DB::table('logs')->where('user_id', '=', $request->input('user_id'))->get();
+  
+
+    $initialMonday = Carbon::parse('first Monday of December 2018');
+    $initialMonday = $initialMonday->format('MM DD YYYY');
+    $initialTuesday = Carbon::parse('first Monday of December 2018')->addDays(1);
+    $initialTuesday = $initialTuesday->format('MM DD YYYY');
+    $initialWednesday = Carbon::parse('first Monday of December 2018')->addDays(2);
+    $initialWednesday = $initialWednesday->format('MM DD YYYY');
+    $initialThursday = Carbon::parse('first Monday of December 2018')->addDays(3);
+    $initialThursday = $initialThursday->format('MM DD YYYY');
+    $initialFriday = Carbon::parse('first Monday of December 2018')->addDays(4);
+    $initialFriday = $initialFriday->format('MM DD YYYY');
+
+
+    $monday = array();
+    $tuesday = array();
+    $wednesday = array();
+    $thursday = array();
+    $friday = array();
+
+    foreach ($logs as $log) {
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialMonday == $adjustedDate){
+        array_push ($monday, $log);
+      }
+    }
+
+    foreach ($logs as $log) {
+
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialTuesday == $adjustedDate){
+        array_push ($tuesday, $log);
+      }
+    }
+
+    foreach ($logs as $log) {
+
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialWednesday == $adjustedDate){
+        array_push ($wednesday, $log);
+      }
+    }
+
+    foreach ($logs as $log) {
+
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialThursday == $adjustedDate){
+        array_push ($thursday, $log);
+      }
+    }
+
+    foreach ($logs as $log) {
+
+      $adjustedDate = Carbon::parse($log->next_visit)->format('MM DD YYYY');
+
+      if ($initialFriday == $adjustedDate){
+        array_push ($friday, $log);
+      }
+    }
+
+    return view('employee.employeeProjectedCalendar', compact('monday', 'tuesday', 'wednesday', 'thursday', 'friday'));
+
+});
+
+
 
 
 
@@ -173,9 +269,9 @@ Route::get('/employeeContactOutput/{id}', function (Request $request, $id) {
     return view('employee/employeeContactOutput', compact('contact'));
 });
 
-Route::get('/employeeLogOutput/{id}', function (Request $request) {
-    $log = \App\Log::all();
-    return view('employee/employeeLogOutput');
+Route::get('/employeeLogOutput/{id}', function (Request $request, $id) {
+    $log = \App\Log::find($id);
+    return view('employee/employeeLogOutput', compact('log'));
 });
 
 Route::get('/home', function () {
