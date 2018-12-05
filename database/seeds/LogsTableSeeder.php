@@ -14,8 +14,8 @@ class LogsTableSeeder extends Seeder
 
 
 
-        $logs = factory(App\Log::class, 30)->create();
-      
+        $logs = factory(App\Log::class, 15)->create();
+
         //
     }
 }

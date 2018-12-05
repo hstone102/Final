@@ -12578,6 +12578,6 @@ label.panel-block:hover {
 }
 
 .grey {
-  background-color: #D3D3D3;
+  opacity: .5;
 }
 
