@@ -4,18 +4,15 @@
       <a href="/employeeDashboard"class="navbar-item">
         Home
       </a>
-      <a href="/employeeUrgentNeeds"class="navbar-item">
+      <!-- <a href="/employeeUrgentNeeds"class="navbar-item">
         Urgent Needs
-      </a>
+      </a> -->
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
           <a href="/reportIssue" class="navbar-item">
             Report an issue
           </a>

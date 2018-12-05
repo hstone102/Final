@@ -12577,3 +12577,7 @@ label.panel-block:hover {
   text-decoration: underline;
 }
 
+.grey {
+  background-color: #D3D3D3;
+}
+

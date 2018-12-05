@@ -22,7 +22,7 @@
               your Chart
             </h1>
             <p class="subtitle">
-              Your charts... your way!
+              An online charting system.
             </p>
           </div>
         </section>

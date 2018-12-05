@@ -7,7 +7,7 @@
 <div class="columns">
   <div class="column">
     <a href="supervisorReviewEvent">
-    <div class="box m-b-lg">
+    <div class="box m-b-lg grey">
       <article class="media">
         <div class="media-left">
           <figure class="image is-64x64">
@@ -45,7 +45,7 @@
 <div class="columns">
   <div class="column">
     <a href="supervisorVisitReport">
-    <div class="box m-b-lg">
+    <div class="box m-b-lg grey">
       <article class="media">
         <div class="media-left">
           <figure class="image is-64x64">
